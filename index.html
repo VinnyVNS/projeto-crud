@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Projeto Crud</title>
+</head>
+<body>
+
+    <header>
+        <h1>Projeto Crud</h1>
+    </header>
+
+    <main>
+        <form id="formulario">
+            <p>Nome</p>
+            <input type="text" id="nomeIpt">
+
+            <p>CPF</p>
+            <input type="text" id="cpfIpt">
+
+            <p>Data de Nascimento</p>
+            <input type="text" id="nascimentoIpt">
+
+            <p>Email</p>
+            <input type="text" id="emailIpt">
+
+            <p>Número de Celular</p>
+            <input type="text" id="celularIpt">
+
+            <button onclick="cadastrarPaciente()">Cadastrar</button>
+
+            <div id="mensagem"></div>
+        </form>
+
+        <button onclick="limparForm()">Limpar</button>
+
+        <br>
+
+        <div>
+            <select name="pacientes" id="seletor"></select>
+
+            <button onclick="verCadastro()">Ver Cadastro</button>
+
+            <button onclick="attCadastro()">Atualizar Cadastro</button>
+
+            <button onclick="deletarCadastro()">Deletar Cadastro</button>
+        </div>
+
+        
+        
+
+    </main>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
