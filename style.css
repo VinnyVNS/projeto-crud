@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(200, 200, 200);
+}
+
+header {
+    font-size: 40px;
+    text-align: center;
+    color: black;
+    background-color: aqua;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: solid black 3px;
+}
+
+main {
+    margin-left: 12%;
+    margin-right: 12%;
+}
+
+#areaForms {
+    display: flex;
+}
+
+.forms {
+    background-color: aqua;
+    width: 100%;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    border: solid black 3px;
+}
+
+#formPaciente {
+    margin: 10px;
+    font-size: 20px;
+}
+
+#consultaForm {
+    margin: 10px;
+    font-size: 20px;
+}
+
+.iptForm {
+    padding: 10px;
+    width: 70%;
+    border: solid black 2px;
+}
+
+.iptForm:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px black;
+}
+
+.seletores {
+    font-size: 20px;
+    width: 70%;
+    border: solid black 2px;
+}
+
+.seletores:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px black;
+    transform: scale(1.02);
+}
+
+.seletores:focus {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px black;
+    transform: scale(1.02);
+}
+
+.btnForm {
+    font-size: 20px;
+    padding: 2px;
+    margin-top: 5px;
+    margin-right: 5px;
+    border: solid black 2px;
+}
+
+.btnForm:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px black;
+    transform: scale(1.05);
+}
+
+.btnForm:active {
+    transform: scale(1);
+}
+
+#consultasMarcadas {
+    display: flex;
+    flex-direction: column;
+}
+
+#areaConsulta {
+    display: flex;
+    align-items: center;
+}
+
+.consultaNova {
+    background-color: white;
+    margin: 10px;
+    width: 70%;
+    padding: 10px;
+    font-size: 17px;
+    border-radius: 20px;
+    border-right: solid aqua 12px;
+}
+
+
+.btnDel {
+    background-color: red;
+    padding: 5px;
+    width: 50px;
+    font-size: 20px;
+}
+
+.btnDel:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}

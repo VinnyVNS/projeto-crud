@@ -13,40 +13,88 @@
     </header>
 
     <main>
-        <form id="formulario">
-            <p>Nome</p>
-            <input type="text" id="nomeIpt">
+        <div id="areaForms">
+            <div class="forms">
+                <form id="formPaciente">
+                    <h2>ID</h2>
+                    <input type="text" id="idPaciente" class="iptForm">
+                        
+                    <h2>Nome</h2>
+                    <input type="text" id="nomeIpt" class="iptForm">
+                        
+                    <h2>CPF</h2>
+                    <input type="text" id="cpfIpt" class="iptForm">
+                        
+                    <h2>Data de Nascimento</h2>
+                    <input type="text" id="nascimentoIpt" class="iptForm">
+                        
+                    <h2>Email</h2>
+                    <input type="text" id="emailIpt" class="iptForm">
+                        
+                    <h2>Número de Celular</h2>
+                    <input type="text" id="celularIpt" class="iptForm">
 
-            <p>CPF</p>
-            <input type="text" id="cpfIpt">
+                    <br>
+                        
+                    <button onclick="cadastrarPaciente()" class="btnForm">Cadastrar</button>
+                        
+                    <button onclick="limparFormCadastro()" class="btnForm">Limpar</button>
 
-            <p>Data de Nascimento</p>
-            <input type="text" id="nascimentoIpt">
+                    <div id="mensagemCadastro"></div>
 
-            <p>Email</p>
-            <input type="text" id="emailIpt">
+                    <br><br>
 
-            <p>Número de Celular</p>
-            <input type="text" id="celularIpt">
+                    <h2>Cadastros</h2>
+                    <select name="pacientesCadastro" id="seletorCadastro" class="seletores"></select>
 
-            <button onclick="cadastrarPaciente()">Cadastrar</button>
+                    <br>
+                        
+                    <button onclick="verCadastro()" class="btnForm">Ver Cadastro</button>
+                        
+                    <button onclick="attCadastro()" class="btnForm">Atualizar Cadastro</button>
+                        
+                    <button onclick="deletarCadastro()" class="btnForm">Deletar Cadastro</button>
+                        
+                </form>
+            </div>        
 
-            <div id="mensagem"></div>
-        </form>
+            <div class="forms">
+                <form id="consultaForm">
+                    <h2>Paciente</h2>
+                    <select name="pacientesConsulta" id="seletorConsulta" class="seletores"></select>
+                    
+                    <h2>ID</h2>
+                    <input type="text" id="idConsulta" class="iptForm">
+                    
+                    <h2>Data da Consulta</h2>
+                    <input type="text" id="dataConsulta" class="iptForm">
+                    
+                    <h2>Hora da Consulta</h2>
+                    <input type="text" id="horaConsulta" class="iptForm">
+                    
+                    <h2>Endereço da Consulta</h2>
+                    <input type="text" id="enderecoConsulta" class="iptForm">
+                    
+                    <h2>Consultório</h2>
+                    <input type="text" id="consultorio" class="iptForm">
+                    
+                    <h2>Nome do Médico</h2>
+                    <input type="text" id="medicoConsulta" class="iptForm">
 
-        <button onclick="limparForm()">Limpar</button>
+                    <h2>Observações</h2>
+                    <input type="text" id="obsConsulta" class="iptForm">
 
-        <br>
+                    <br>
 
-        <div>
-            <select name="pacientes" id="seletor"></select>
+                    <button onclick="cadastrarConsulta()" class="btnForm">Registrar Consulta</button>
 
-            <button onclick="verCadastro()">Ver Cadastro</button>
+                    <div id="mensagemConsulta"></div>
 
-            <button onclick="attCadastro()">Atualizar Cadastro</button>
+                </form>
+            </div>
+        </div>    
 
-            <button onclick="deletarCadastro()">Deletar Cadastro</button>
-        </div>
+        <div id="consultasMarcadas"></div>
 
         
         
