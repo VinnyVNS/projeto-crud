@@ -25,8 +25,6 @@ function cadastrarPaciente(){
 
     for(let i = 0; i < pacientes.length; i++){
         if(novoPaciente.IDpaciente === pacientes[i].IDpaciente){
-            limparFormCadastro()
-
             mensagem.innerHTML = `ID já cadastrado.`
             
             return
@@ -166,20 +164,20 @@ function verConsultas(){
             <div id="areaConsulta">
                 <div class="consultaNova">
                     <h2>Informações do Paciente</h2>
-                    <h3>ID do Paciente: ${consultas[i].pacienteInfo.IDpaciente}</h3>
-                    <h3>Nome: ${consultas[i].pacienteInfo.Nome}</h3>
-                    <h3>CPF: ${consultas[i].pacienteInfo.CPF}</h3>
-                    <h3>Data de Nascimento: ${consultas[i].pacienteInfo.DataDeNascimento}</h3>
-                    <h3>Email: ${consultas[i].pacienteInfo.Email}</h3>
-                    <h3>Celular: ${consultas[i].pacienteInfo.Celular}</h3>
+                    <p>ID do Paciente: ${consultas[i].pacienteInfo.IDpaciente}</p>
+                    <p>Nome: ${consultas[i].pacienteInfo.Nome}</p>
+                    <p>CPF: ${consultas[i].pacienteInfo.CPF}</p>
+                    <p>Data de Nascimento: ${consultas[i].pacienteInfo.DataDeNascimento}</p>
+                    <p>Email: ${consultas[i].pacienteInfo.Email}</p>
+                    <p>Celular: ${consultas[i].pacienteInfo.Celular}</p>
                     <br><br>
                     <h2>Informações da Consulta</h2>
-                    <h3>ID da Consulta: ${consultas[i].IDconsulta}</h3>
-                    <h3>Data da Consulta: ${consultas[i].DataConsulta}</h3>
-                    <h3>Hora da Consulta: ${consultas[i].HoraConsulta}</h3>
-                    <h3>Endereço: ${consultas[i].EnderecoConsulta}</h3>
-                    <h3>Consultório: ${consultas[i].Consultorio}</h3>
-                    <h3>Nome do Médico: ${consultas[i].NomeDoMedico}</h3>  
+                    <p>ID da Consulta: ${consultas[i].IDconsulta}</p>
+                    <p>Data da Consulta: ${consultas[i].DataConsulta}</p>
+                    <p>Hora da Consulta: ${consultas[i].HoraConsulta}</p>
+                    <p>Endereço: ${consultas[i].EnderecoConsulta}</p>
+                    <p>Consultório: ${consultas[i].Consultorio}</p>
+                    <p>Nome do Médico: ${consultas[i].NomeDoMedico}</p>  
                 </div>
         
                 <div id="delConsulta">
@@ -226,6 +224,10 @@ function limparFormCadastro(){
 }
 
 function limparFormConsulta(){
+    consultaForm.addEventListener("submit", (event) => {
+        event.preventDefault()
+    })
+
     document.getElementById("idConsulta").value = ``
     document.getElementById("dataConsulta").value = ``
     document.getElementById("horaConsulta").value = ``

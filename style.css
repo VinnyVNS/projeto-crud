@@ -2,17 +2,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+:root {
+    --cor-primaria: rgba(0, 255, 255, 0.820);
+    --cor-secundaria: rgb(190, 190, 190);
 }
 
 body {
-    background-color: rgb(200, 200, 200);
+    /* background-color: var(--cor-secundaria); */
+    background-image: url("../imagens/fundo.png");
 }
 
 header {
     font-size: 40px;
     text-align: center;
     color: black;
-    background-color: aqua;
+    background-color: var(--cor-primaria);
     padding-bottom: 10px;
     margin-bottom: 20px;
     margin-left: 10%;
@@ -23,8 +30,8 @@ header {
 }
 
 main {
-    margin-left: 12%;
-    margin-right: 12%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 #areaForms {
@@ -32,9 +39,10 @@ main {
 }
 
 .forms {
-    background-color: aqua;
+    background-color: var(--cor-primaria);
     width: 100%;
-    margin: 10px;
+    margin-right: 50px;
+    margin-left: 50px;
     padding: 5px;
     border-radius: 20px;
     border: solid black 3px;
@@ -42,16 +50,21 @@ main {
 
 #formPaciente {
     margin: 10px;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 #consultaForm {
     margin: 10px;
-    font-size: 20px;
+    font-size: 15px;
+}
+
+.textoForm {
+    font-size: 30px;
+    text-align: center;
 }
 
 .iptForm {
-    padding: 10px;
+    padding: 5px;
     width: 70%;
     border: solid black 2px;
 }
@@ -62,7 +75,7 @@ main {
 }
 
 .seletores {
-    font-size: 20px;
+    font-size: 15px;
     width: 70%;
     border: solid black 2px;
 }
@@ -80,7 +93,7 @@ main {
 }
 
 .btnForm {
-    font-size: 20px;
+    font-size: 15px;
     padding: 2px;
     margin-top: 5px;
     margin-right: 5px;
@@ -100,6 +113,8 @@ main {
 #consultasMarcadas {
     display: flex;
     flex-direction: column;
+    margin-left: 50px;
+    margin-right: 15%;
 }
 
 #areaConsulta {
@@ -114,7 +129,7 @@ main {
     padding: 10px;
     font-size: 17px;
     border-radius: 20px;
-    border-right: solid aqua 12px;
+    border-right: solid var(--cor-primaria) 12px;
 }
 
 

@@ -15,6 +15,7 @@
     <main>
         <div id="areaForms">
             <div class="forms">
+                <h2 class="textoForm">Registro de Paciente</h2>
                 <form id="formPaciente">
                     <h2>ID</h2>
                     <input type="text" id="idPaciente" class="iptForm">
@@ -26,7 +27,7 @@
                     <input type="text" id="cpfIpt" class="iptForm">
                         
                     <h2>Data de Nascimento</h2>
-                    <input type="text" id="nascimentoIpt" class="iptForm">
+                    <input type="date" id="nascimentoIpt" class="iptForm">
                         
                     <h2>Email</h2>
                     <input type="text" id="emailIpt" class="iptForm">
@@ -59,6 +60,7 @@
             </div>        
 
             <div class="forms">
+                <h2 class="textoForm">Registrar Consulta</h2>
                 <form id="consultaForm">
                     <h2>Paciente</h2>
                     <select name="pacientesConsulta" id="seletorConsulta" class="seletores"></select>
@@ -67,10 +69,10 @@
                     <input type="text" id="idConsulta" class="iptForm">
                     
                     <h2>Data da Consulta</h2>
-                    <input type="text" id="dataConsulta" class="iptForm">
+                    <input type="date" id="dataConsulta" class="iptForm">
                     
                     <h2>Hora da Consulta</h2>
-                    <input type="text" id="horaConsulta" class="iptForm">
+                    <input type="time" id="horaConsulta" class="iptForm">
                     
                     <h2>Endereço da Consulta</h2>
                     <input type="text" id="enderecoConsulta" class="iptForm">
@@ -87,6 +89,8 @@
                     <br>
 
                     <button onclick="cadastrarConsulta()" class="btnForm">Registrar Consulta</button>
+
+                    <button onclick="limparFormConsulta()" class="btnForm">Limpar</button>
 
                     <div id="mensagemConsulta"></div>
 
