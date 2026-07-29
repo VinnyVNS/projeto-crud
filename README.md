@@ -28,7 +28,6 @@ Gerenciamento da agenda médica, vinculando o atendimento aos pacientes previame
   - Data da consulta
   - Hora da consulta
   - Nome do médico
-  - Área de especialização (ex: Cardiologia, Ortopedia, Clínica Geral)
 
 ## Tecnologias Utilizadas
 
