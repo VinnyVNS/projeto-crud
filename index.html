@@ -41,7 +41,11 @@
                         
                     <button onclick="limparFormCadastro()" class="btnForm">Limpar</button>
 
-                    <div id="mensagemCadastro"></div>
+                    <br><br>
+
+                    <div id="mensagemCadastroCerto" class="mensagemFormCerto"></div>
+
+                    <div id="mensagemCadastroErro" class="mensagemFormErro"></div>
 
                     <br><br>
 
@@ -60,7 +64,7 @@
             </div>        
 
             <div class="forms">
-                <h2 class="textoForm">Registrar Consulta</h2>
+                <h2 class="textoForm">Registro de Consulta</h2>
                 <form id="consultaForm">
                     <h2>Paciente</h2>
                     <select name="pacientesConsulta" id="seletorConsulta" class="seletores"></select>
@@ -83,16 +87,17 @@
                     <h2>Nome do Médico</h2>
                     <input type="text" id="medicoConsulta" class="iptForm">
 
-                    <h2>Observações</h2>
-                    <input type="text" id="obsConsulta" class="iptForm">
+                    <br>
+
+                    <div id="mensagemConsultaCerto" class="mensagemFormCerto"></div>
+                    
+                    <div id="mensagemConsultaErro" class="mensagemFormErro"></div>
 
                     <br>
 
                     <button onclick="cadastrarConsulta()" class="btnForm">Registrar Consulta</button>
 
                     <button onclick="limparFormConsulta()" class="btnForm">Limpar</button>
-
-                    <div id="mensagemConsulta"></div>
 
                 </form>
             </div>

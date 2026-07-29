@@ -21,11 +21,12 @@ function cadastrarPaciente(){
         Celular: document.getElementById("celularIpt").value
     }
 
-    let mensagem = document.getElementById("mensagemCadastro")
+    let mensagemErro = document.getElementById("mensagemCadastroErro")
+    let mensagemCerto = document.getElementById("mensagemCadastroCerto")
 
     for(let i = 0; i < pacientes.length; i++){
         if(novoPaciente.IDpaciente === pacientes[i].IDpaciente){
-            mensagem.innerHTML = `ID já cadastrado.`
+            mensagemErro.innerHTML = `ID já cadastrado.`
             
             return
         }
@@ -38,7 +39,7 @@ function cadastrarPaciente(){
     attSeletorCadastros()
     attSeletorPacientes()
 
-    mensagem.innerHTML = `Paciente cadastrado.`
+    mensagemCerto.innerHTML = `Paciente cadastrado.`
 }
 
 function verCadastro(){
@@ -65,7 +66,7 @@ function attCadastro(){
         event.preventDefault()
     })
 
-    let mensagem = document.getElementById("mensagemCadastro")
+    let mensagemCerto = document.getElementById("mensagemCadastroCerto")
 
     let valorSeletor = document.getElementById("seletorCadastro").value
 
@@ -91,7 +92,7 @@ function attCadastro(){
 
     limparFormCadastro()
 
-    mensagem.innerHTML = `Cadastro atualizado.`
+    mensagemCerto.innerHTML = `Cadastro atualizado.`
 
     salvarDados()
     attSeletorCadastros()
@@ -104,7 +105,7 @@ function deletarCadastro(){
         event.preventDefault()
     })
 
-    let mensagem = document.getElementById("mensagemCadastro")
+    let mensagemCerto = document.getElementById("mensagemCadastroCerto")
 
     let valorSeletor = document.getElementById("seletorCadastro").value
 
@@ -117,7 +118,7 @@ function deletarCadastro(){
             attSeletorCadastros()
             attSeletorPacientes()
 
-            mensagem.innerHTML = `Cadastro removido.`
+            mensagemCerto.innerHTML = `Cadastro removido.`
         }
     }
 }
@@ -131,7 +132,11 @@ function cadastrarConsulta(){
     
     let valorSeletor = document.getElementById("seletorConsulta").value
 
+    let mensagemErro = document.getElementById("mensagemConsultaErro")
+    let mensagemCerto = document.getElementById("mensagemConsultaCerto")
+
     if(valorSeletor === "null"){
+        mensagemErro.innerHTML = `Selecione um Paciente.`
         return
     }
     
@@ -148,12 +153,14 @@ function cadastrarConsulta(){
             }
         }
     }
-    
+
     consultas.push(novaConsulta)
     
     salvarDados()
     limparFormConsulta()
     verConsultas()
+
+    mensagemCerto.innerHTML = `Consulta Cadastrada.`
 }
 
 function verConsultas(){
@@ -164,20 +171,20 @@ function verConsultas(){
             <div id="areaConsulta">
                 <div class="consultaNova">
                     <h2>Informações do Paciente</h2>
-                    <p>ID do Paciente: ${consultas[i].pacienteInfo.IDpaciente}</p>
-                    <p>Nome: ${consultas[i].pacienteInfo.Nome}</p>
-                    <p>CPF: ${consultas[i].pacienteInfo.CPF}</p>
-                    <p>Data de Nascimento: ${consultas[i].pacienteInfo.DataDeNascimento}</p>
-                    <p>Email: ${consultas[i].pacienteInfo.Email}</p>
-                    <p>Celular: ${consultas[i].pacienteInfo.Celular}</p>
+                    <p><strong>ID do Paciente: ${consultas[i].pacienteInfo.IDpaciente}</strong></p>
+                    <p><strong>Nome: ${consultas[i].pacienteInfo.Nome}</strong></p>
+                    <p><strong>CPF: ${consultas[i].pacienteInfo.CPF}</strong></p>
+                    <p><strong>Data de Nascimento: ${consultas[i].pacienteInfo.DataDeNascimento}</strong></p>
+                    <p><strong>Email: ${consultas[i].pacienteInfo.Email}</strong></p>
+                    <p><strong>Celular: ${consultas[i].pacienteInfo.Celular}</strong></p>
                     <br><br>
                     <h2>Informações da Consulta</h2>
-                    <p>ID da Consulta: ${consultas[i].IDconsulta}</p>
-                    <p>Data da Consulta: ${consultas[i].DataConsulta}</p>
-                    <p>Hora da Consulta: ${consultas[i].HoraConsulta}</p>
-                    <p>Endereço: ${consultas[i].EnderecoConsulta}</p>
-                    <p>Consultório: ${consultas[i].Consultorio}</p>
-                    <p>Nome do Médico: ${consultas[i].NomeDoMedico}</p>  
+                    <p><strong>ID da Consulta: ${consultas[i].IDconsulta}</strong></p>
+                    <p><strong>Data da Consulta: ${consultas[i].DataConsulta}</strong></p>
+                    <p><strong>Hora da Consulta: ${consultas[i].HoraConsulta}</strong></p>
+                    <p><strong>Endereço: ${consultas[i].EnderecoConsulta}</strong></p>
+                    <p><strong>Consultório: ${consultas[i].Consultorio}</strong></p>
+                    <p><strong>Nome do Médico: ${consultas[i].NomeDoMedico}</strong></p>  
                 </div>
         
                 <div id="delConsulta">
@@ -209,7 +216,8 @@ function limparFormCadastro(){
         event.preventDefault()
     })
     
-    let mensagem = document.getElementById("mensagemCadastro")
+    let mensagemErro = document.getElementById("mensagemCadastroErro")
+    let mensagemCerto = document.getElementById("mensagemCadastroCerto")
 
     document.getElementById("idPaciente").value = ``
     document.getElementById("nomeIpt").value = ``
@@ -220,13 +228,17 @@ function limparFormCadastro(){
 
     document.getElementById("idPaciente").focus()
 
-    mensagem.innerHTML = ``
+    mensagemErro.innerHTML = ``
+    mensagemCerto.innerHTML = ``
 }
 
 function limparFormConsulta(){
     consultaForm.addEventListener("submit", (event) => {
         event.preventDefault()
     })
+
+    let mensagemErro = document.getElementById("mensagemConsultaErro")
+    let mensagemCerto = document.getElementById("mensagemConsultaCerto")
 
     document.getElementById("idConsulta").value = ``
     document.getElementById("dataConsulta").value = ``
@@ -236,6 +248,9 @@ function limparFormConsulta(){
     document.getElementById("medicoConsulta").value = ``
 
     document.getElementById("idConsulta").focus()
+
+    mensagemErro.innerHTML = ``
+    mensagemCerto.innerHTML = ``
 }
 
 function attSeletorCadastros(){
