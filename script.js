@@ -176,6 +176,14 @@ function cadastrarConsulta(){
         }
     }
 
+    for(let i = 0; i < consultas.length; i++){
+        if(novaConsulta.IDconsulta === consultas[i].IDconsulta){
+            mensagemErro.innerHTML = `ID já cadastrado.`
+            
+            return
+        }
+    }
+
     consultas.push(novaConsulta)
     
     salvarDados()
