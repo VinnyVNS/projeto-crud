@@ -7,6 +7,28 @@ attSeletorCadastros()
 attSeletorPacientes()
 verConsultas()
 
+function cadastroTeste() {
+    let novoPaciente = {
+        IDpaciente: `2026789456`,
+        Nome: `Vinicius`,
+        CPF: `333.444.555-77`,
+        DataDeNascimento: `1995-05-05`,
+        Email: `teste@teste.com`,
+        Celular: `99933-5577`
+    }
+
+    pacientes.push(novoPaciente)
+
+    salvarDados()
+    limparFormCadastro()
+    attSeletorCadastros()
+    attSeletorPacientes()
+
+    let mensagemCerto = document.getElementById("mensagemCadastroCerto")
+
+    mensagemCerto.innerHTML = `Paciente cadastrado.`
+}
+
 function cadastrarPaciente(){
     formPaciente.addEventListener("submit", (event) => {
         event.preventDefault()
